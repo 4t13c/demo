@@ -1,0 +1,4 @@
+# https://www.liquibase.org/documentation/databasechangelog.html
+databaseChangeLog:
+  - includeAll:
+      path: bbdd/changes/
