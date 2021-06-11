@@ -1,5 +1,4 @@
-# API Rest con Spring boot y cucumber(falta documentar cucumber)
-
+# API Rest con Spring boot y cucumber
 ## 1. descripción de la aplicación de ejemplo
 En la base de datos de comercio electrónico de la compañía disponemos de la tabla PRICES que refleja el precio final (pvp) y la tarifa que aplica a un producto de una cadena entre unas fechas determinadas. A continuación se muestra un ejemplo de la tabla con los campos relevantes:
 
@@ -80,9 +79,6 @@ La parte más importante es la de las dependencias. Para nuestro proyecto hemos 
 ## 4. configuración del proyecto
 En las siguientes secciones vamos a describir cómo está organizada la aplicación.
 
-### 4.1. Estructura de la paquetería
-Para empezar, el paquete origen de toda la aplicación será `com.sng.demo`. A partir de ahí cuelga la siguiente estructura de paquetes:
-
 * `controller` - Clases controladoras de nuestro API Rest, aquí se define la estructura de las APIs que expondremos hacia el exterior.
   * `dto` - contiene todos los beans tanto de entrada como de salida de nuestra aplicación (se corresponden con los especificados en la documentación del API Rest)
     * `request` - beans de entrada de información, son los que se mapean cuando recibimos una petición a nuestra API.
@@ -96,9 +92,9 @@ Para empezar, el paquete origen de toda la aplicación será `com.sng.demo`. A p
   * `service` - aquí van las implementaciones de los servicios del paquete padre
 * `utils` - aqui pondremos utilidades globales tal como un customLocalDateTimeDeserializer
 
-### 4.6. Propiedades de la aplicación
+### 4.1. Propiedades de la aplicación
 En src>main>resources encontraremos el application.yaml
-### 4.7. Liquibase (configuración de la base de datos)
+### 4.2. Liquibase (configuración de la base de datos)
 [Liquibase](https://www.liquibase.org/) es una librería que nos permite gestionar nuetra base de datos desde código. Podemos definir una serie de scripts que queremos que se ejecuten en el arranque de nuestras aplicaciones y la propia librería se ocupa de crear en la base de datos un par de tablas que se usan para controlar qué scripts han sido ejecutados de forma que no se repitan.
 
 Algunos artículos para profundizar:
@@ -110,3 +106,7 @@ Alternativas:
 * https://flywaydb.org/
 * https://github.com/mongobee/mongobee (para mongodb, descontinuada)
 * https://github.com/cloudyrock/mongock (para mongb, fork de mongobee)
+
+## 5.Cucumber
+TODO
+Contexto is failing
